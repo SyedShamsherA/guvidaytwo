@@ -1,0 +1,40 @@
+                        DIFFERENCE BETWEEN DOCUMENT AND WINDOW OBJECT MODEL
+
+                                      WINDOW OBJECT MODEL
+                
+1. The window object model contains objects that represents the current browser window or tab. The topmost object in the WOM is the
+   object representing the window or tab or an iframe sometimes.
+2. Window object has properties like browser history, location and the device's screen etc.
+3. In case of multi tab browser, a window object represnts a single tab, but some of its properties like innerHeight, innerWidth
+   will effect the ehole browser window.
+        
+                                                  WINDOW
+                                                    ↓
+    ↓                  ↓                            ↓                  ↓               ↓
+    frames[]         history                    location             navigator        screen
+
+4. WOM is the top most object and the outermost element of the object hierarchy.
+5. Window.open, opens a new window or tab.
+6. It also handles event like, onload, onresize, onscroll, and timers like, setTimeout and setInterval etc.
+7. It facilitates communication between different windows or frames within the browser through methods like postMessage() for 
+   secure cross-origin communication.
+
+                                    DOCUMENT OBJECT MODEL
+
+1. When a web page is loaded, the browser creates a DOcument Object Model of the page.
+2. The document object model represents the whole HTML document as a tree of objects (HTML, HEAD, BODY, and other HTML tags)
+
+                                                  DOCUMENTS 
+                                                     ↓
+↓               ↓               ↓                     ↓                      ↓                 ↓            ↓             ↓
+anchors[]    applets[]       areas[]               embeds[]              forms[]            image[]      layers[]       linkd[]
+
+3. The documents contain the contents of the page. Using document object, javascript can modify, add, and delete the HTML 
+   elements, attributes CSS styles in the page.
+4. We can access a document object either using window.document property or using document object directly as window is global
+   object.
+5. document.open(), creates a blank document within the window.
+6. It provide methods and properties to access and manipulate the content of the web page, For instances - document.getElementById(),
+   document.querySelector(), document.createElement(), etc.
+7. It enables developers to dynamically change the structure, content and style of the webpage, allowing for interactive and 
+   responsive web applications.
